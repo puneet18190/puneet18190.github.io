@@ -1,4 +1,4 @@
-sanjeev2838.github.io
+puneet18190.github.io
 =====================
 
 Resume page
