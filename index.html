@@ -1,456 +1,660 @@
-<!doctype HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title> Puneet's Resume</title>
-	<link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="main.css" />
-	 <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-	 <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
-	 <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-	 <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-	 <link href='http://fonts.googleapis.com/css?family=Fanwood+Text' rel='stylesheet' type='text/css'>
-	 <style>
-	 .wrapper {
-	 	margin: 0 auto;
-	 	width: 900px;
-	 	position: relative;
-	 }
-	 .main {
-	 	margin-bottom: 100px;
-	 	margin-top: 10px;
-	 }
-	 .main h1 {
-	 	text-align: center;
-	 	font-family: 'Fanwood Text', serif;
-	 	color:#79B2AE;
-	 	width: 250px;
-	 	padding-bottom: 5px;
-	 	margin: 0 auto;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puneet Gupta — Lead Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-	 }
-	 .top {
-	 	position: absolute;
-	 	top: 20px;
-	 	font-family: arial;
-	 	font-size: 30px;
-	 }
+    :root {
+      --navy:   #1B2F6E;
+      --teal:   #0E7C7B;
+      --navy-lt:#EBF0FB;
+      --teal-lt:#E4F4F3;
+      --dark:   #111827;
+      --mid:    #374151;
+      --muted:  #6B7280;
+      --line:   #E5E7EB;
+      --bg:     #F9FAFB;
+      --white:  #FFFFFF;
+    }
 
-	 .top span {
-	 	font-family: arial;
-	 	font-size: 30px;
-	 	color:#79B2AE;
-	 	font-family: 'Fanwood Text', serif;
-	 	vertical-align: middle;	
-	 }
-	 .tleft {
-	 	left: 20px;
-	 	top: 20px;
-	 	font-size: 12px;
-	 	color:#69696B;
-	 	font-family: 'Ubuntu Condensed', sans-serif;
-	 	display:inline-block;
-	 	vertical-align: middle;
-	 }
+    html { scroll-behavior: smooth; }
 
-	 .tright {
-	 	right: 0px;
-	 	top: 20px;
-	 	font-size: 12px;
-	 	color:#69696B;
-	 	font-family: 'Ubuntu Condensed', sans-serif;
-	 	vertical-align: middle;
-	 	top:33px;
-	 }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-	 .left {
-	 	width:170px;
-	 	float: left;
-	 	padding-left: 30px;
-	 }
-	 .right {
-	 	width:528px;
-	 	float: left;
-	 }
-	 .left h2 {
-	 	font-size: 12px;
-	 	margin: 0;
-	 	font-family: 'Ubuntu Condensed', sans-serif;
-	 	font-weight: 300;
-	 	color:#79B2AE;
+    /* ── HEADER ── */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      box-shadow: 0 1px 8px rgba(0,0,0,.06);
+    }
+    .nav-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      letter-spacing: .01em;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-left: 1.8rem;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--navy); }
 
-	 }
-	 .job span {
-	 	float: right;
-	 	font-family: 'Libre Baskerville', serif;
-	 	font-style: italic;
-	 	color:#9CC1BE;
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(27,47,110,.05) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(14,124,123,.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -.02em;
+    }
+    .hero-name .part1 { color: var(--navy); }
+    .hero-name .part2 { color: var(--teal); }
 
-	 }
-	 .job {
-  		font-size: 12px;
-  		font-family: 'Libre Baskerville', serif;
-	 }
-	 .job h2 {
-	 	margin: 0;
-	 	padding: 0;
-	 	font-size: 12px;
-	 	font-family: 'Libre Baskerville', serif;
-	 	font-weight: normal;
-	 	color:#69696B;
-	 }
-	 .job h3 {
-	 	margin: 0;
-	 	padding: 0;
-	 	font-size: 12px;
-	 	font-family: 'Libre Baskerville', serif;
-	 	font-style: italic;
-	 	font-weight: normal;
-	 	color:#7F7F80;
-	 }
-	 .job p {
-	 	margin: 0;
-	 	padding: 0;
-	 	font-family: 'Libre Baskerville', serif;
-	 	padding-bottom: 20px;
-	 	color:#7F7F80;
-	 }
-	 .clear {
-	 	clear: both
-	 }
-	 .footer a {
-	 	text-align: center;
-	 	font-size: 12px;
-	 	margin-top: 50px;
-	 	margin-bottom: 10px;
-	 	color: #eb374b;
-	 	font-family: 'Libre Baskerville', serif;
-	 	text-decoration: none;
-	 	display: block;
-	 }
-	 .job .extrapadding {
-	 	padding-bottom: 20px;
-	 }
-	 .box {
-	 	width: 900px;
-	 	background-color: #FAFAFA;
-	 	box-shadow: rgba(0,0,0,0.3) 0px 0px 3px;
-	 	margin: 40px 0;
-	 	padding: 10px;
-	 }
-	 .projects {
-	 	text-decoration: none;
-	 	color:#79B2AE;
-	 	font-size: 12px;
-	 }
+    .hero-title {
+      margin-top: .6rem;
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: .02em;
+    }
 
-	 .job ul li {
-	 	margin: 0;
-	 	padding: 0;
-	 	font-size: 12px;
-	 	font-family: 'Libre Baskerville', serif;
-	 	font-weight: normal;
-	 	color:#69696B;
-	 }
-	 </style>
-</head>
+    /* Dual badge */
+    .badges {
+      display: inline-flex;
+      gap: 0;
+      margin-top: 1.4rem;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    }
+    .badge {
+      padding: .45rem 1.4rem;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .badge-navy { background: var(--navy); }
+    .badge-teal { background: var(--teal); }
+
+    /* Contact row */
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .5rem 2rem;
+      margin-top: 1.6rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      font-size: .85rem;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .contact-item:hover { color: var(--navy); }
+    .contact-item svg {
+      width: 16px; height: 16px;
+      flex-shrink: 0;
+    }
+    .contact-item.linkedin svg { color: var(--navy); }
+    .contact-item.email svg   { color: var(--teal); }
+    .contact-item.phone svg   { color: var(--navy); }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 2.8rem; opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+    .section.visible { opacity: 1; transform: none; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 1.1rem;
+    }
+    .section-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-navy { background: var(--navy); }
+    .dot-teal { background: var(--teal); }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--dark);
+      letter-spacing: .01em;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--line), transparent);
+    }
+
+    /* ── SUMMARY ── */
+    .summary-text {
+      background: var(--white);
+      border-left: 3px solid var(--navy);
+      padding: 1rem 1.3rem;
+      border-radius: 0 6px 6px 0;
+      color: var(--mid);
+      font-size: .92rem;
+      line-height: 1.8;
+      box-shadow: 0 1px 6px rgba(0,0,0,.04);
+    }
+
+    /* ── ACHIEVEMENTS ── */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+    }
+    @media(max-width: 600px) { .achievements-grid { grid-template-columns: 1fr; } }
+
+    .achievement-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: .9rem 1rem .9rem 1rem;
+      display: flex;
+      gap: .7rem;
+      align-items: flex-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .achievement-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.09); transform: translateY(-2px); }
+    .achievement-card .ach-icon {
+      width: 28px; height: 28px; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: .9rem;
+    }
+    .ach-navy { background: var(--navy-lt); color: var(--navy); }
+    .ach-teal { background: var(--teal-lt); color: var(--teal); }
+    .achievement-card p { font-size: .84rem; color: var(--mid); line-height: 1.55; }
+
+    /* ── SKILLS ── */
+    .skills-group { margin-bottom: 1rem; }
+    .skills-group-label {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: .5rem;
+      padding: .2rem .6rem;
+      border-radius: 3px;
+      display: inline-block;
+    }
+    .label-navy { color: var(--navy); background: var(--navy-lt); }
+    .label-teal { color: var(--teal); background: var(--teal-lt); }
+    .label-grey { color: var(--muted); background: #F3F4F6; }
+
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table tr { border-bottom: 1px solid var(--line); }
+    .skills-table tr:last-child { border-bottom: none; }
+    .skills-table td { padding: .45rem .5rem; font-size: .85rem; vertical-align: top; }
+    .skill-cat {
+      width: 140px;
+      font-weight: 600;
+      color: var(--navy);
+      white-space: nowrap;
+      padding-right: 1rem;
+    }
+    .skill-cat.teal { color: var(--teal); }
+    .skill-val { color: var(--mid); }
+
+    /* ── EXPERIENCE ── */
+    .job { margin-bottom: 1.8rem; position: relative; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: .2rem;
+      margin-bottom: .5rem;
+    }
+    .job-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: var(--dark);
+      font-style: italic;
+    }
+    .job-meta { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+    .job-company { font-size: .82rem; font-weight: 600; }
+    .job-company.navy { color: var(--navy); }
+    .job-company.teal { color: var(--teal); }
+    .job-sep { color: var(--line); font-size: .8rem; }
+    .job-location { font-size: .8rem; color: var(--muted); }
+    .job-dates {
+      font-size: .78rem;
+      color: var(--muted);
+      font-style: italic;
+      white-space: nowrap;
+      background: #F3F4F6;
+      padding: .15rem .55rem;
+      border-radius: 20px;
+    }
+    .job ul {
+      list-style: none;
+      padding-left: .2rem;
+    }
+    .job ul li {
+      display: flex;
+      gap: .6rem;
+      align-items: baseline;
+      font-size: .86rem;
+      color: var(--mid);
+      padding: .22rem 0;
+      line-height: 1.55;
+    }
+    .job ul li::before {
+      content: '▸';
+      color: var(--teal);
+      font-size: .7rem;
+      flex-shrink: 0;
+      margin-top: .15rem;
+    }
+    .job-divider {
+      height: 1px;
+      background: linear-gradient(to right, var(--line) 60%, transparent);
+      margin-top: 1.8rem;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    }
+    .edu-degree { font-weight: 600; font-size: .92rem; color: var(--dark); }
+    .edu-school { font-size: .82rem; color: var(--muted); margin-top: .15rem; }
+    .edu-year {
+      font-size: .8rem;
+      color: var(--muted);
+      font-style: italic;
+      background: #F3F4F6;
+      padding: .2rem .7rem;
+      border-radius: 20px;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      header, .hero::before { display: none; }
+      body { background: white; font-size: 11pt; }
+      .section { opacity: 1; transform: none; }
+      .container { padding: 1rem; max-width: 100%; }
+      .hero { padding: 1rem 0; }
+      .achievement-card:hover { transform: none; box-shadow: none; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .hero-name    { animation: fadeDown .6s ease both; }
+    .hero-title   { animation: fadeDown .6s .1s ease both; }
+    .badges       { animation: fadeDown .6s .2s ease both; }
+    .contact-row  { animation: fadeDown .6s .3s ease both; }
+  </style>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="box">
-		<div class="main">
-			<h1>Puneet Gupta</h1>
-			<!-- <div class="top tleft"><span>T</span>(7814948711)</div> -->
-			<div class="top tright">PUNEETGUPTA18190@GMAIL.COM</div><br>
-			<div class="top tright" style="margin-top:20px">Mob: 7696557793</div>
-			<div class="top tleft">Skype: puneetgupta_18190</div>
-			<div class="top tleft" style="margin-top:20px">Stackoverflow: stackoverflow.com/users/5497690/puneet18</div>
-			<!-- <div class="top tleft" style="margin-top:40px">Web: puneetgupta.herokuapp.com</div> -->
-		</div>
-		<div class="left">
-			<h2>EXPERIENCE</h2>
-		</div>
-		<div class="right">
-			<div class="job">
-				<h2>Freelancer<span>March 2022 - Till now</span></h2>
-				<!-- <h3>Kalebr Technologies, Dubai, UAE</h3> -->
-				<ul>
-					<li>Working as freelancer for different technologies project</li>
-				</ul>
-				<p></p>
-			</div>
-			<div class="job">
-				<h2>SOFTWARE ENGINEER<span>September 2019- March 2022</span></h2>
-				<h3>Kalebr Technologies, Dubai, UAE</h3>
-				<ul>
-					<li>Work on Hopsock.com product</li>
-					<li>Completed project from scratch which is related to playing Challenges for users.</li>
-					<li>Designed and implemented database architecture the product</li>
-					<li>Designed UI pages using VueJs, Tailwind css and ROR</li>
-				</ul>
-				<p></p>
-			</div>
-			<div class="job">
-				<h2>SR. SOFTWARE ENGINEER<span>August 2017-September 2019</span></h2>
-				<h3>Maropost Pvt Ltd, Mohali, Punjab</h3>
-				<ul>
-					<li>Work on Maropost Marketing Cloud product</li>
-					<li>Completed and added two modules from scratch ie Acquisition & Social Media Campaign</li>
-					<li>Designed and implemented database architecture for new module Social Media Campaign</li>
-					<li>Designed UI pages using Twitter Bootstrap, custom CSS, JavaScript/JQuery, and JQuery UI.</li>
-					<li>Work as a Team lead in Social Media Campaign Module</li>
-					<li>Write Automated Test Cases by Cypress</li>
-				</ul>
-				<p></p>
-			</div>
-			<div class="job">
-				<h2>SR. SOFTWARE ENGINEER<span>May 2014-August 2017</span></h2>
-				<h3>Impinge Solutions, Mohali, Punjab</h3>
-				<ul>
-					<li>Developed Ruby on Rails applications.</li>
-					<li>Designed and implemented database architecture for applications using various databases (MySQL, and Postgres)</li>
-					<li>Designed UI pages using Twitter Bootstrap, custom CSS, JavaScript/JQuery, and JQuery UI.</li>
-					<li>Implemented RESTful APIs to interact with Mobile devices</li>
-					<li>Worked closely with the design team to rapidly implement new features.</li>
-					<li>Integration of different plug-ins and gems.</li>
-					<li>Client Interaction, get requirements and complete it within timeline.</li>
-				</ul>
-				<p></p>
-			</div>
 
-			<div class="job">
-				<h2>SOFTWARE ENGINEER<span>Jun. 2012-Sep. 2013</span></h2>
-				<h3>Enbake Consulting Pvt Ltd., Zirakpur, Punjab</h3>
-				<ul>
-					<li>Developed Ruby on Rails applications.</li>
-					<li>Executed enhancements to existing applications.</li>
-					<li>Managed projects with agile methodologies in Bugherd via user stories.</li>
-					<li>Integrated RSpec and Cucumber tests to applications.</li>
-					<li>Use Github repositories.</li>
-					<li>Integration of different plug-ins.</li>
-				</ul>	
-				<p></p>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<div class="left">
-			<h2>PROGRAMMING SKILLS</h2>
-		</div>
-		<div class="right">
-			<div class="job">
-				<ul>
-					<li>Ruby on Rails</li>
-					<li>HTML, CSS, Javascript, JQuery, AJAX, HAML</li>
-					<li>MySQL, SQLite, PostgreSQL, MongoDB, Redis</li>
-					<li>Git (Bitbucket, Github)</li>
-					<li>Nginx & Apache servers, Heroku</li>
-					<li>Appcelerator with Titanium</li>
-					<li>Ionic with Angular</li>
-					<li>Web Scrapping</li>
-					<li>Google map apis, Facebook and Twitter apis</li>
-					<li>Build Backend with Apis for Mobile devices</li>
-					<li>Template Integrations</li>
-					<li>Xamarin with Calabash cucmber test</li>
-					<li>Cypress, Respec, Watir Tests</li>
-				</ul>
-				<p></p>
-			</div>
-		</div>
-		<div class="clear"></div>
+<!-- ── STICKY NAV ── -->
+<header>
+  <span class="nav-name">Puneet Gupta</span>
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+  </nav>
+</header>
 
-		<div class="left">
-			<h2>PROJECTS</h2>
-		</div>
-		<div class="right">
-			<div class="job">
-				<h2>Maropost</h2>
-				<p>Marpost Software as a Service Marketing Cloud technology provides organizations a single platform to connect with customers via marketing automation, mass and transactional email, social media, mobile messaging, landing pages, and more. Link: <a href="http://maropost.com" target="_blank" class="projects">maropost.com</a></p>
-			</div>
-			<div class="job">
-				<h2>SealProperties</h2>
-				<p>Properties buy/sell web application built in ROR. There are admin users who can create properties, landlords, tenants, staff and manage properties. Link: <a href="http://sealproperties.co.uk" target="_blank" class="projects">sealproperties.co.uk</a></p>
-			</div>
+<!-- ── HERO ── -->
+<div class="hero">
+  <h1 class="hero-name">
+    <span class="part1">Puneet&nbsp;</span><span class="part2">Gupta</span>
+  </h1>
+  <p class="hero-title">Lead Software Engineer &nbsp;·&nbsp; 14 Years of Experience</p>
+  <div class="badges">
+    <span class="badge badge-navy">Full Stack Engineer</span>
+    <span class="badge badge-teal">QA Automation Engineer</span>
+  </div>
+  <div class="contact-row">
+    <a href="mailto:puneetgupta18190@gmail.com" class="contact-item email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      puneetgupta18190@gmail.com
+    </a>
+    <a href="tel:+917696557793" class="contact-item phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +91 7696557793
+    </a>
+    <a href="https://linkedin.com/in/puneet-gupta-460271a2" target="_blank" class="contact-item linkedin">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      linkedin.com/in/puneet-gupta-460271a2
+    </a>
+  </div>
+</div>
 
-			<div class="job">
-				<h2>2wheels4cash</h2>
-				<p>Rails app to get information of various bikes. Link: <a href="http://www.2wheels4cash.co.uk" target="_blank" class="projects">www.2wheels4cash.co.uk</a></p>
-			</div>
+<!-- ── MAIN CONTENT ── -->
+<div class="container">
 
-			<!-- <div class="job">
-				<h2>Dormbuys</h2>
-				<p>Ecommerce web application built in ruby on rails. Users can create their account, choose category and select products to buys and then make payments. Paypal gateway is integrated for payment processing. Link: <a href="http://www.dormbuys.com" target="_blank" class="projects">www.dormbuys.com</a></p>
-			</div> -->
+  <!-- SUMMARY -->
+  <div class="section" id="summary">
+    <div class="section-header">
+      <span class="section-dot dot-navy"></span>
+      <h2 class="section-title">Professional Summary</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="summary-text">
+      Lead Software Engineer with 14 years of experience spanning both full-stack web development and enterprise test automation. Expert in building scalable Ruby on Rails backends, Vue.js/React frontends, and REST APIs — while simultaneously architecting distributed Cypress/Playwright automation infrastructure that cuts regression time by 60–70%. Unique professional who bridges the developer and QA worlds: writes production features, designs database schemas, and builds the automation frameworks that validate them. Experienced in AI-assisted workflows using Claude AI (Pro) and Qodo, team leadership, and delivering high-quality software at velocity.
+    </div>
+  </div>
 
-			<div class="job">
-				<h2>Kindline</h2>
-				<p>Its a magazine app whose backend is build in ROR and provide apis to mobile devices. In this app, there are different stores and sale person can drop and pick the magazine issues to different store. Collect payment and submit payment online. Link: <a href="http://api.kindline.net" target="_blank" class="projects">api.kindline.net</a></p>
-			</div>
-			
-			<div class="job">
-				<h2>Prayerzone</h2>
-				<p>ThePrayerZone is a ruby on rails app which provides teenagers and young adults a place to ask for prayers and for Prayer Champions to pray on their behalf. Link: <a href="http://theprayerzone.com" target="_blank" class="projects">theprayerzone.com</a></p>
-			</div>
-			<div class="job">
-				<h2>BoundRound</h2>
-				<p>Rails application which display various places and their details. Users can create their account and search the details of places where they like to travel. Link: <a href="http://www.boundround.com" target="_blank" class="projects">www.boundround.com</a></p>
-			</div>
+  <!-- KEY ACHIEVEMENTS -->
+  <div class="section" id="achievements">
+    <div class="section-header">
+      <span class="section-dot dot-teal"></span>
+      <h2 class="section-title">Key Achievements</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <div class="ach-icon ach-navy">⚡</div>
+        <p>Architected distributed parallel execution infrastructure running <strong>1000+ scripts simultaneously</strong>, cutting regression time by <strong>60–70%</strong> and accelerating release cycles</p>
+      </div>
+      <div class="achievement-card">
+        <div class="ach-icon ach-teal">🤖</div>
+        <p>Pioneered <strong>AI-assisted workflows</strong> using Claude AI (Pro) and Qodo — auto-generating Cypress scripts from test scenarios, developing features, and resolving bugs faster</p>
+      </div>
+      <div class="achievement-card">
+        <div class="ach-icon ach-navy">👥</div>
+        <p>Built and mentored a <strong>5-engineer automation team</strong>, raising code quality and delivery standards across the engineering organization</p>
+      </div>
+      <div class="achievement-card">
+        <div class="ach-icon ach-teal">🏗️</div>
+        <p>Designed and built <strong>web applications from scratch</strong> using Ruby on Rails backend and Vue.js frontend with Tailwind CSS / Bootstrap UI — full architecture through deployment</p>
+      </div>
+      <div class="achievement-card">
+        <div class="ach-icon ach-navy">🚀</div>
+        <p>Optimized <strong>heavy database queries</strong> and relational schema design, significantly improving application performance and response times across high-traffic platforms</p>
+      </div>
+    </div>
+  </div>
 
-			<!-- <div class="job">
-				<h2>Prelaunchr</h2>
-				<p>Rails application in which there prize groups, open/closed states, and simple social sharing. Link: <a href="http://prelaucherapp1.herokuapp.com" target="_blank" class="projects">prelaucherapp1.herokuapp.com</a></p>
-			</div> -->
+  <!-- SKILLS -->
+  <div class="section" id="skills">
+    <div class="section-header">
+      <span class="section-dot dot-navy"></span>
+      <h2 class="section-title">Core Technical Skills</h2>
+      <div class="section-line"></div>
+    </div>
 
-			<div class="job">
-				<h2>Weunite</h2>
-				<p>WeUnite is a social way to follow your Passion. On WeUnite user can learn and share the knowledge about his Passion. Link: <a href="http://www.weunite.com" target="_blank" class="projects">www.weunite.com</a></p>
-			</div>
+    <div class="skills-group">
+      <span class="skills-group-label label-navy">Full Stack Development</span>
+      <table class="skills-table">
+        <tr>
+          <td class="skill-cat">Backend</td>
+          <td class="skill-val">Ruby on Rails, Ruby, REST APIs, Microservices Architecture, PostgreSQL, MySQL, MongoDB, Redis, SQLite</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Frontend</td>
+          <td class="skill-val">Vue.js, React, JavaScript (ES6+), TypeScript, Turbo, Tailwind CSS, Bootstrap, jQuery, HTML5, CSS3, AJAX, HAML</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Architecture</td>
+          <td class="skill-val">System Design, Scalable Architectures, Distributed Systems, Performance Optimization, API Design</td>
+        </tr>
+      </table>
+    </div>
 
-			<!-- <div class="job">
-				<h2>3Question</h2>
-				<p>3Question is social review for website. It makes easy to collect reviews and share customer reviews on user website. Link: <a href="http://get3questions.com" target="_blank" class="projects">get3questions.com</a></p>
-			</div> -->
+    <div class="skills-group">
+      <span class="skills-group-label label-teal">QA &amp; Automation</span>
+      <table class="skills-table">
+        <tr>
+          <td class="skill-cat teal">Automation</td>
+          <td class="skill-val">Cypress, Playwright, Sorry Cypress (Parallel), Selenium, Watir, RSpec, Cucumber, API Testing, TypeScript</td>
+        </tr>
+        <tr>
+          <td class="skill-cat teal">AI &amp; Tooling</td>
+          <td class="skill-val">Claude AI (Pro), Qodo, Prompt Engineering, AI-Driven Test &amp; Feature Generation</td>
+        </tr>
+      </table>
+    </div>
 
-			<!-- <div class="job">
-				<h2>Competency Management</h2>
-				<p>Rails application in which added Stripe Payment Gateway and fixed issues. Link: <a href="http://188.166.154.136" target="_blank" class="projects">188.166.154.136</a></p>
-			</div> -->
+    <div class="skills-group">
+      <span class="skills-group-label label-grey">DevOps &amp; Tools</span>
+      <table class="skills-table">
+        <tr>
+          <td class="skill-cat">DevOps</td>
+          <td class="skill-val">Docker, Nginx, Apache, Heroku, Git, GitHub, Bitbucket, CI/CD Pipelines</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
-			<div class="job">
-				<h2>GuideToBe</h2>
-				<p>Add google analytics to Rails application. Link: <a href="http://gtb-test.herokuapp.com" target="_blank" class="projects">gtb-test.herokuapp.com</a></p>
-			</div>
+  <!-- EXPERIENCE -->
+  <div class="section" id="experience">
+    <div class="section-header">
+      <span class="section-dot dot-teal"></span>
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="section-line"></div>
+    </div>
 
-			<!-- <div class="job">
-				<h2>Chat app</h2>
-				<p>Basic chat application built in ROR using pusher. Link: <a href="http://puneet-app1.herokuapp.com" target="_blank" class="projects">puneet-app1.herokuapp.com</a></p>
-			</div> -->
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Lead Software Engineer – Full Stack &amp; Test Automation</div>
+          <div class="job-meta">
+            <span class="job-company navy">Enlil, Inc</span>
+            <span class="job-sep">|</span>
+            <span class="job-location">USA (Remote)</span>
+          </div>
+        </div>
+        <span class="job-dates">Apr 2022 – Present</span>
+      </div>
+      <ul>
+        <li>Architected distributed test automation infrastructure using Sorry Cypress — 1000+ scripts running in parallel across multiple servers, reducing regression execution by 60–70%</li>
+        <li>Built and maintained high-performance Ruby on Rails backend services and REST APIs supporting an AI-driven SaaS platform</li>
+        <li>Designed scalable CI/CD-integrated test pipelines covering web, REST API, and multi-environment validation (dev, staging, production)</li>
+        <li>Leveraged Claude AI (Pro) to auto-generate Cypress test scripts from test scenarios, accelerate new feature development, and speed up bug resolution — reducing manual effort significantly</li>
+        <li>Led and mentored a team of 5 engineers, establishing best practices that improved code quality and delivery speed organization-wide</li>
+        <li>Collaborated cross-functionally with product and QA teams to identify critical defects early and reduce production incidents</li>
+      </ul>
+    </div>
+    <div class="job-divider"></div>
 
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Full Stack Engineer</div>
+          <div class="job-meta">
+            <span class="job-company teal">Pier Media FZ LLC</span>
+            <span class="job-sep">|</span>
+            <span class="job-location">Dubai, UAE</span>
+          </div>
+        </div>
+        <span class="job-dates">Mar 2020 – Mar 2022</span>
+      </div>
+      <ul>
+        <li>Developed full-stack applications using Ruby on Rails and Vue.js with Turbo for reactive, consumer-facing features</li>
+        <li>Designed and exposed scalable REST APIs consumed by web and mobile clients; authored comprehensive API test suites</li>
+        <li>Optimized PostgreSQL relational database schemas, improving query performance by 40% and supporting millions of records</li>
+        <li>Integrated Redis caching layer improving response times for high-traffic user interactions</li>
+        <li>Owned complete feature delivery lifecycle — from architecture through deployment on cloud infrastructure</li>
+      </ul>
+    </div>
+    <div class="job-divider"></div>
 
-			<div class="job">
-				<h2>Scrapper</h2>
-				<p>Rails applicaiton which scrapes data from different website by some login. Link: <a href="http://nokogiri-app.herokuapp.com" target="_blank" class="projects">nokogiri-app.herokuapp.com</a></p>
-			</div>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Full Stack Engineer</div>
+          <div class="job-meta">
+            <span class="job-company teal">Kalebr Technologies</span>
+            <span class="job-sep">|</span>
+            <span class="job-location">Dubai, UAE</span>
+          </div>
+        </div>
+        <span class="job-dates">Sep 2019 – Mar 2020</span>
+      </div>
+      <ul>
+        <li>Built Hopsock.com from the ground up as sole full-stack engineer — scalable PostgreSQL + Redis database architecture, Ruby on Rails backend, Vue.js + Tailwind CSS frontend</li>
+        <li>Owned end-to-end product development lifecycle including architecture, feature development, automated test coverage, and deployment</li>
+      </ul>
+    </div>
+    <div class="job-divider"></div>
 
-			<div class="job">
-				<h2>Redmine Plugin</h2>
-				<!-- <h3>Thinkful, New York City</h3> -->
-				<p>Built a plugin and integrated it with Redmine app.In plugin, various departments are made and save/retrieve the data. Link: <a href="http://esp.epicbrokers.com" target="_blank" class="projects">esp.epicbrokers.com</a></p>
-			</div>
-			
-			<div class="job">
-				<h2>Stealth ROI</h2>
-				<p>Rails application in which users can show their sales data in graphical format for differnet ecommerce website like teehood.com,teespring.com, shopify.com,etc. Users can create their account and put their api keys for shopify or other ecommerce website then the whole stats of earning and money spends on facebook and other ads are displayed. Link: <a href="http://stealth-app.herokuapp.com" target="_blank" class="projects">stealth-app.herokuapp.com</a></p>
-			</div>
-			<div class="job">
-				<h2>Web Diluo</h2>
-				<p>ails application in which apis are made which is used by andriod/iphone devices and store/retrieve the data. Link: <a href="http://diluo-app.herokuapp.com" target="_blank" class="projects">diluo-app.herokuapp.com</a></p>
-			</div>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Senior Software Engineer</div>
+          <div class="job-meta">
+            <span class="job-company navy">Maropost Pvt Ltd</span>
+            <span class="job-sep">|</span>
+            <span class="job-location">India</span>
+          </div>
+        </div>
+        <span class="job-dates">Aug 2017 – Sep 2019</span>
+      </div>
+      <ul>
+        <li>Developed Acquisition &amp; Social Media Campaign modules from scratch for Maropost Marketing Cloud, scaling to millions of end-users</li>
+        <li>Designed high-volume database architecture for marketing campaign data; led development team for the Social Media Campaign module</li>
+        <li>Implemented Cypress automated testing and RSpec to ensure 95%+ code reliability across critical SaaS modules</li>
+      </ul>
+    </div>
+    <div class="job-divider"></div>
 
-			<!-- <div class="job">
-				<h2>Spree</h2>
-				<p>Implemented spree gem and built an ecommerce web application. Spree is an e-commerce website in which admin adds product to bid and users place their bid. Admin accept/reject users bid. Link: <a href="http://my-spree-store.herokuapp.com" target="_blank" class="projects">my-spree-store.herokuapp.com</a></p>
-			</div> -->
-			<div class="job">
-				<h2>Webscrapper</h2>
-				<p>In this project, made various scripts in ruby language to scrap data from different websites like yelp,etc. I used nokogiri and mechanize gem of ruby to scrap data and automate the process of scrapping.</p>
-			</div>
-			<div class="job">
-				<h2>Newappetite</h2>
-				<p>Rails application in which songs are played using soundcloud apis. User can create their account and make categories for the songs. Link: <a href="http://newappetite.com" target="_blank" class="projects">newappetite.com</a></p>
-			</div>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Senior Software Engineer</div>
+          <div class="job-meta">
+            <span class="job-company navy">Impinge Solutions</span>
+            <span class="job-sep">|</span>
+            <span class="job-location">India</span>
+          </div>
+        </div>
+        <span class="job-dates">May 2014 – Aug 2017</span>
+      </div>
+      <ul>
+        <li>Developed high-performance Ruby on Rails applications and RESTful APIs for diverse enterprise client requirements</li>
+        <li>Designed and optimized relational database schemas (MySQL, PostgreSQL) for scalability and data integrity</li>
+        <li>Integrated complex third-party APIs with optimized data synchronization and validation layers</li>
+      </ul>
+    </div>
+    <div class="job-divider"></div>
 
-			<div class="job">
-				<h2>AirSea Packing</h2>
-				<p>Its a shipping rate calculator app with some logic. There is admin who can create users, import or add rates for different routes, create location and show quotes submitted by users. Link: <a href="http://airsea.herokuapp.com" target="_blank" class="projects">airsea.herokuapp.com</a></p>
-			</div>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Software Engineer</div>
+          <div class="job-meta">
+            <span class="job-company teal">Enbake Consulting Pvt Ltd</span>
+            <span class="job-sep">|</span>
+            <span class="job-location">India</span>
+          </div>
+        </div>
+        <span class="job-dates">Jun 2012 – Sep 2013</span>
+      </div>
+      <ul>
+        <li>Developed and enhanced Ruby on Rails applications in Agile environment using GitHub for version control</li>
+        <li>Established foundational automated test coverage using RSpec and Cucumber frameworks</li>
+      </ul>
+    </div>
+  </div>
 
-			<!-- <div class="job">
-				<h2>CommentTime</h2>
-				<p>Its a backend which can save and upload videos to aws, create category and provide apis to mobile devices. Link: <a href="http://commenttimeapp.com" target="_blank" class="projects">commenttimeapp.com</a></p>
-			</div> -->
+  <!-- EDUCATION -->
+  <div class="section" id="education">
+    <div class="section-header">
+      <span class="section-dot dot-navy"></span>
+      <h2 class="section-title">Education</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="edu-card">
+      <div>
+        <div class="edu-degree">B.Tech – Computer Science Engineering</div>
+        <div class="edu-school">Maharishi Markandeshwar University, Mullana, Ambala, India</div>
+      </div>
+      <span class="edu-year">2008 – 2012</span>
+    </div>
+  </div>
 
-			<div class="job">
-				<h2>Shopify</h2>
-				<p>Its an ecommerce website in which we can customize the theme using liquid templating language.</p>
-			</div>
+</div><!-- /container -->
 
-			<div class="job">
-				<h2>Connector</h2>
-				<p>Its a ROR application in which admin can create users, campaigns and run campaign which send messages to targets by email or by websockets. Link: <a href="http://connector-staging.herokuapp.com" target="_blank" class="projects">connector-staging.herokuapp.com</a></p>
-			</div>
-
-			<div class="job">
-				<h2>Calabash</h2>
-				<p>Write test cases in ruby calabash and test ios app on xamarin cloud.</p>
-			</div>			
-		</div>
-		<div class="clear"></div>
-		
-		<div class="left">
-			<h2>Mobile Apps</h2>
-		</div>
-		
-		<div class='right'>
-			<div class="job">
-				<h2>3rdAgeLearner</h2>
-				<p>Its a mobile app which is built in titanium framework which run on both iOS and andriod devices. In this app, users create their account and add video/images as a post and other users can add comments on different posts.</p>
-			</div>
-
-			<div class="job">
-				<h2>Viractual</h2>
-				<p>Its a mobile app built in titanium. In this app, employees are added their working hours in timesheets, update profile and messaging to clients. Client can review employee timesheet and approve/reject it,update profile, create message groups and send messages to clients and employees.</p>
-			</div>
-
-			<div class="job">
-				<h2>Forkourse</h2>
-				<p>Its a mobile app build in Ionic Framework. Its a restaurant order app using which customers order food using app. Backend is in php.</p>
-			</div>
-
-
-			<div class="job">
-				<h2>Rxmed</h2>
-				<p>Its a mobile app built in Ionic Framework which contains basic categories and products. User can search products for different categories.</p>
-			</div>
-		</div>
-		
-		<div class="clear"></div>
-
-		<div class="left">
-			<h2>EDUCATION</h2>
-		</div>
-		
-		<div class='right'>
-			<div class="job">
-				<h2>MAHARISHI MARKANDESHWAR UNIVERSITY</h2>
-				<h3 class="extrapadding">Mullana, Ambala — BTECH 2008-2012 - Computer Science Engg.</h3>
-			</div>
-		</div>
-		
-		<div class="clear"></div>
-
-		
-<!-- 		<div class="left">
-			<h2>INTERESTS</h2>
-		</div>
-		<div class="right">
-			<div class="job">
-				<p>Cooking (culinary classes ongoing), Wine (Premier Cru Certificate from Institute of Culinary Education), Fly Fishing, Running, Tennis.</p>
-			</div>
-		</div>
-		<div class="clear"></div> -->
-		<!-- <div class="left">
-			<h2>REFERRALS</h2>
-		</div>
-		<div class="right">
-			<div class="job">
-				<p>Available upon request.</p>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<div class="footer">
-			<a href="http://sarahjrose.com">sarahjrose.com</a>
-		</div> -->
-	</div>
-	</div>
+<script>
+  // Scroll reveal
+  const sections = document.querySelectorAll('.section');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  sections.forEach(s => io.observe(s));
+</script>
 </body>
 </html>
