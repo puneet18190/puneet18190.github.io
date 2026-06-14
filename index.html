@@ -99,6 +99,14 @@
       font-weight: 400;
       letter-spacing: .02em;
     }
+    .hero-subtitle {
+      margin-top: .35rem;
+      font-size: .82rem;
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: .03em;
+      font-style: italic;
+    }
 
     /* Dual badge */
     .badges {
@@ -145,6 +153,8 @@
     .contact-item.linkedin svg { color: var(--navy); }
     .contact-item.email svg   { color: var(--teal); }
     .contact-item.phone svg   { color: var(--navy); }
+    .contact-item.github svg  { color: var(--mid); }
+    .contact-item.location svg { color: var(--teal); }
 
     /* ── LAYOUT ── */
     .container {
@@ -247,7 +257,7 @@
     .skills-table tr:last-child { border-bottom: none; }
     .skills-table td { padding: .45rem .5rem; font-size: .85rem; vertical-align: top; }
     .skill-cat {
-      width: 140px;
+      width: 150px;
       font-weight: 600;
       color: var(--navy);
       white-space: nowrap;
@@ -354,6 +364,7 @@
     }
     .hero-name    { animation: fadeDown .6s ease both; }
     .hero-title   { animation: fadeDown .6s .1s ease both; }
+    .hero-subtitle{ animation: fadeDown .6s .15s ease both; }
     .badges       { animation: fadeDown .6s .2s ease both; }
     .contact-row  { animation: fadeDown .6s .3s ease both; }
   </style>
@@ -365,6 +376,7 @@
   <span class="nav-name">Puneet Gupta</span>
   <nav>
     <a href="#summary">Summary</a>
+    <a href="#achievements">Achievements</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
@@ -376,10 +388,11 @@
   <h1 class="hero-name">
     <span class="part1">Puneet&nbsp;</span><span class="part2">Gupta</span>
   </h1>
-  <p class="hero-title">Lead Software Engineer &nbsp;·&nbsp; 14 Years of Experience</p>
+  <p class="hero-title">Lead Software Engineer &nbsp;·&nbsp; Building Scalable Apps &amp; AI-Powered Automation Systems</p>
+  <p class="hero-subtitle">Rails &nbsp;·&nbsp; Vue &nbsp;·&nbsp; React &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; AWS &nbsp;·&nbsp; MCP Servers &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; AI Test Generation &nbsp;·&nbsp; 14 YoE</p>
   <div class="badges">
     <span class="badge badge-navy">Full Stack Engineer</span>
-    <span class="badge badge-teal">QA Automation Engineer</span>
+    <span class="badge badge-teal">QA Automation + AI Engineer</span>
   </div>
   <div class="contact-row">
     <a href="mailto:puneetgupta18190@gmail.com" class="contact-item email">
@@ -390,9 +403,17 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       +91 7696557793
     </a>
+    <span class="contact-item location">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Panchkula, Haryana, India
+    </span>
     <a href="https://linkedin.com/in/puneet-gupta-460271a2" target="_blank" class="contact-item linkedin">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       linkedin.com/in/puneet-gupta-460271a2
+    </a>
+    <a href="https://github.com/puneet18190" target="_blank" class="contact-item github">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      github.com/puneet18190
     </a>
   </div>
 </div>
@@ -408,7 +429,7 @@
       <div class="section-line"></div>
     </div>
     <div class="summary-text">
-      Lead Software Engineer with 14 years of experience spanning both full-stack web development and enterprise test automation. Expert in building scalable Ruby on Rails backends, Vue.js/React frontends, and REST APIs — while simultaneously architecting distributed Cypress/Playwright automation infrastructure that cuts regression time by 60–70%. Unique professional who bridges the developer and QA worlds: writes production features, designs database schemas, and builds the automation frameworks that validate them. Experienced in AI-assisted workflows using Claude AI (Pro) and Qodo, team leadership, and delivering high-quality software at velocity.
+      Lead Software Engineer with 14 years bridging full-stack development and enterprise test automation. Expert in building scalable, high-concurrency Ruby on Rails and Node.js backends, Vue.js/React frontends, and RESTful APIs deployed on AWS — while architecting distributed Cypress/Playwright automation that cuts regression time by 60–70%. Skilled at event-driven architectures (Sidekiq, Kafka, AWS SQS, Redis Pub/Sub) and high-volume data systems (PostgreSQL, MongoDB, Elasticsearch). Experienced building AI-powered features with Anthropic Claude and OpenAI APIs, Claude Code, built LangChain-based RAG pipelines and agentic workflows using OpenAI API and Python, and a custom MCP (Model Context Protocol) server with dual retrieval / RAG to ground LLM outputs in real codebase context and eliminate hallucinations. Proven team lead delivering high-quality software at velocity.
     </div>
   </div>
 
@@ -421,24 +442,28 @@
     </div>
     <div class="achievements-grid">
       <div class="achievement-card">
+        <div class="ach-icon ach-teal">🧠</div>
+        <p>Built a custom <strong>MCP (Model Context Protocol) server</strong> with agentic tool-calling — dual retrieval (keyword grep + vector similarity search / RAG) over 1000+ indexed Cypress artifacts — grounding LLM-generated tests in real selectors and API routes and <strong>eliminating hallucinated test code</strong></p>
+      </div>
+      <div class="achievement-card">
         <div class="ach-icon ach-navy">⚡</div>
-        <p>Architected distributed parallel execution infrastructure running <strong>1000+ scripts simultaneously</strong>, cutting regression time by <strong>60–70%</strong> and accelerating release cycles</p>
+        <p>Architected <strong>distributed parallel execution</strong> running 1000+ Cypress scripts simultaneously, cutting regression time by <strong>60–70%</strong> and accelerating production release cycles</p>
       </div>
       <div class="achievement-card">
         <div class="ach-icon ach-teal">🤖</div>
-        <p>Pioneered <strong>AI-assisted workflows</strong> using Claude AI (Pro) and Qodo — auto-generating Cypress scripts from test scenarios, developing features, and resolving bugs faster</p>
+        <p>Integrated <strong>Anthropic Claude and OpenAI APIs</strong> with Claude Code and built <strong>LangChain-based RAG pipelines</strong>, agentic tool-calling workflows, and prompt chains using Python — deepening hands-on applied LLM engineering</p>
       </div>
       <div class="achievement-card">
-        <div class="ach-icon ach-navy">👥</div>
-        <p>Built and mentored a <strong>5-engineer automation team</strong>, raising code quality and delivery standards across the engineering organization</p>
+        <div class="ach-icon ach-navy">🔁</div>
+        <p>Designed <strong>event-driven, high-concurrency backends</strong> with Sidekiq, Redis Pub/Sub, and Kafka-style streaming for high-throughput marketing and SaaS workloads on AWS</p>
       </div>
       <div class="achievement-card">
-        <div class="ach-icon ach-teal">🏗️</div>
-        <p>Designed and built <strong>web applications from scratch</strong> using Ruby on Rails backend and Vue.js frontend with Tailwind CSS / Bootstrap UI — full architecture through deployment</p>
+        <div class="ach-icon ach-teal">👥</div>
+        <p>Built and mentored a <strong>5-engineer team</strong>, raising code quality and delivery standards across the engineering organization</p>
       </div>
       <div class="achievement-card">
-        <div class="ach-icon ach-navy">🚀</div>
-        <p>Optimized <strong>heavy database queries</strong> and relational schema design, significantly improving application performance and response times across high-traffic platforms</p>
+        <div class="ach-icon ach-navy">🏗️</div>
+        <p>Built <strong>Hopsock.com from the ground up</strong> as sole engineer — Rails backend, Vue.js + Tailwind frontend, PostgreSQL + Redis architecture — and optimized PostgreSQL schemas improving query performance by <strong>40%</strong> at Pier Media</p>
       </div>
     </div>
   </div>
@@ -456,39 +481,47 @@
       <table class="skills-table">
         <tr>
           <td class="skill-cat">Backend</td>
-          <td class="skill-val">Ruby on Rails, Ruby, REST APIs, Microservices Architecture, PostgreSQL, MySQL, MongoDB, Redis, SQLite</td>
+          <td class="skill-val">Ruby on Rails, Ruby, Node.js, REST APIs, RESTful API Design, Microservices, OOP, MVC Architecture, Sidekiq (Background Jobs)</td>
         </tr>
         <tr>
           <td class="skill-cat">Frontend</td>
           <td class="skill-val">Vue.js, React, JavaScript (ES6+), TypeScript, Turbo, Tailwind CSS, Bootstrap, jQuery, HTML5, CSS3, AJAX, HAML</td>
         </tr>
         <tr>
+          <td class="skill-cat">Data</td>
+          <td class="skill-val">PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch / OpenSearch, SQLite</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Event / Stream</td>
+          <td class="skill-val">Kafka, AWS SQS, Redis Pub/Sub, Message Queues, Event-Driven Architecture, Stream Processing</td>
+        </tr>
+        <tr>
           <td class="skill-cat">Architecture</td>
-          <td class="skill-val">System Design, Scalable Architectures, Distributed Systems, Performance Optimization, API Design</td>
+          <td class="skill-val">System Design, Scalable Architectures, Distributed Systems, High-Concurrency Systems, Design Patterns, Performance Optimization</td>
         </tr>
       </table>
     </div>
 
     <div class="skills-group">
-      <span class="skills-group-label label-teal">QA &amp; Automation</span>
+      <span class="skills-group-label label-teal">AI &amp; QA Automation</span>
       <table class="skills-table">
+        <tr>
+          <td class="skill-cat teal">AI &amp; LLM</td>
+          <td class="skill-val">Claude AI (Pro), Claude Code, Anthropic Claude API, OpenAI API, LangChain (Python), LangChain Agents, RAG Pipelines, Document Loaders, Prompt Templates, MCP (Model Context Protocol) Servers, Agentic AI Systems, Vector Search / RAG, Semantic Search, Prompt Engineering, Qodo</td>
+        </tr>
         <tr>
           <td class="skill-cat teal">Automation</td>
-          <td class="skill-val">Cypress, Playwright, Sorry Cypress (Parallel), Selenium, Watir, RSpec, Cucumber, API Testing, TypeScript</td>
-        </tr>
-        <tr>
-          <td class="skill-cat teal">AI &amp; Tooling</td>
-          <td class="skill-val">Claude AI (Pro), Qodo, Prompt Engineering, AI-Driven Test &amp; Feature Generation</td>
+          <td class="skill-val">Cypress, Sorry Cypress (Parallel), Playwright, Selenium, Watir, RSpec, Cucumber, API Testing, TypeScript</td>
         </tr>
       </table>
     </div>
 
     <div class="skills-group">
-      <span class="skills-group-label label-grey">DevOps &amp; Tools</span>
+      <span class="skills-group-label label-grey">Cloud, DevOps &amp; Tools</span>
       <table class="skills-table">
         <tr>
-          <td class="skill-cat">DevOps</td>
-          <td class="skill-val">Docker, Nginx, Apache, Heroku, Git, GitHub, Bitbucket, CI/CD Pipelines</td>
+          <td class="skill-cat">Cloud / DevOps</td>
+          <td class="skill-val">AWS (EC2, S3, Lambda), Docker, Heroku, Nginx, Apache, GitHub Actions, CI/CD Pipelines, Git, GitHub, Bitbucket</td>
         </tr>
       </table>
     </div>
@@ -502,6 +535,7 @@
       <div class="section-line"></div>
     </div>
 
+    <!-- Enlil -->
     <div class="job">
       <div class="job-header">
         <div>
@@ -516,15 +550,18 @@
       </div>
       <ul>
         <li>Architected distributed test automation infrastructure using Sorry Cypress — 1000+ scripts running in parallel across multiple servers, reducing regression execution by 60–70%</li>
-        <li>Built and maintained high-performance Ruby on Rails backend services and REST APIs supporting an AI-driven SaaS platform</li>
+        <li>Built and maintained high-performance Ruby on Rails backend services and RESTful APIs supporting an AI-driven SaaS platform deployed on AWS (EC2, S3, Lambda)</li>
         <li>Designed scalable CI/CD-integrated test pipelines covering web, REST API, and multi-environment validation (dev, staging, production)</li>
-        <li>Leveraged Claude AI (Pro) to auto-generate Cypress test scripts from test scenarios, accelerate new feature development, and speed up bug resolution — reducing manual effort significantly</li>
+        <li>Built an MCP (Model Context Protocol) server with agentic tool-calling — dual retrieval (keyword grep + vector similarity search / RAG) over 1000+ indexed Cypress artifacts; the LLM calls these retrieval tools during code generation, grounding output in real selectors, commands, and API routes — eliminating hallucinated test code</li>
+        <li>Integrated Anthropic Claude and OpenAI APIs into Claude Code-driven workflows to auto-generate Cypress tests, accelerate feature development, and speed up bug resolution — reducing manual effort significantly across the full development workflow</li>
+        <li>Developed LangChain-based Python POCs exploring RAG pipelines, agent tool-calling, document loaders, and prompt chain patterns with OpenAI API — applied learnings directly to the MCP server retrieval architecture</li>
         <li>Led and mentored a team of 5 engineers, establishing best practices that improved code quality and delivery speed organization-wide</li>
         <li>Collaborated cross-functionally with product and QA teams to identify critical defects early and reduce production incidents</li>
       </ul>
     </div>
     <div class="job-divider"></div>
 
+    <!-- Pier Media -->
     <div class="job">
       <div class="job-header">
         <div>
@@ -539,14 +576,15 @@
       </div>
       <ul>
         <li>Developed full-stack applications using Ruby on Rails and Vue.js with Turbo for reactive, consumer-facing features</li>
-        <li>Designed and exposed scalable REST APIs consumed by web and mobile clients; authored comprehensive API test suites</li>
-        <li>Optimized PostgreSQL relational database schemas, improving query performance by 40% and supporting millions of records</li>
-        <li>Integrated Redis caching layer improving response times for high-traffic user interactions</li>
+        <li>Designed and exposed scalable RESTful APIs consumed by web and mobile clients; offloaded long-running work to Sidekiq background jobs backed by Redis</li>
+        <li>Optimized PostgreSQL relational database schemas, improving query performance by 40% and supporting millions of records with long-term stability</li>
+        <li>Integrated Redis caching layer significantly improving response times for high-traffic user interactions</li>
         <li>Owned complete feature delivery lifecycle — from architecture through deployment on cloud infrastructure</li>
       </ul>
     </div>
     <div class="job-divider"></div>
 
+    <!-- Kalebr -->
     <div class="job">
       <div class="job-header">
         <div>
@@ -561,11 +599,13 @@
       </div>
       <ul>
         <li>Built Hopsock.com from the ground up as sole full-stack engineer — scalable PostgreSQL + Redis database architecture, Ruby on Rails backend, Vue.js + Tailwind CSS frontend</li>
-        <li>Owned end-to-end product development lifecycle including architecture, feature development, automated test coverage, and deployment</li>
+        <li>Implemented scalable PostgreSQL and Redis data architecture to handle concurrent user sessions effectively</li>
+        <li>Owned end-to-end product development lifecycle including architecture decisions, feature development, and deployment</li>
       </ul>
     </div>
     <div class="job-divider"></div>
 
+    <!-- Maropost -->
     <div class="job">
       <div class="job-header">
         <div>
@@ -579,13 +619,16 @@
         <span class="job-dates">Aug 2017 – Sep 2019</span>
       </div>
       <ul>
-        <li>Developed Acquisition &amp; Social Media Campaign modules from scratch for Maropost Marketing Cloud, scaling to millions of end-users</li>
-        <li>Designed high-volume database architecture for marketing campaign data; led development team for the Social Media Campaign module</li>
+        <li>Developed Acquisition &amp; Social Media Campaign modules from scratch for Maropost Marketing Cloud, scaling to millions of marketing automation users</li>
+        <li>Integrated third-party social platform APIs (REST) with robust data synchronization and error handling via event-driven message queues</li>
+        <li>Designed high-volume database architecture for marketing campaign data, leveraging Elasticsearch for fast search and Kafka-style streaming for high-throughput campaign event processing</li>
+        <li>Led development as Team Lead for the Social Media Campaign module, coordinating delivery across engineers</li>
         <li>Implemented Cypress automated testing and RSpec to ensure 95%+ code reliability across critical SaaS modules</li>
       </ul>
     </div>
     <div class="job-divider"></div>
 
+    <!-- Impinge -->
     <div class="job">
       <div class="job-header">
         <div>
@@ -602,10 +645,12 @@
         <li>Developed high-performance Ruby on Rails applications and RESTful APIs for diverse enterprise client requirements</li>
         <li>Designed and optimized relational database schemas (MySQL, PostgreSQL) for scalability and data integrity</li>
         <li>Integrated complex third-party APIs with optimized data synchronization and validation layers</li>
+        <li>Collaborated directly with international clients to deliver features on time and ensure technical solutions aligned with business goals</li>
       </ul>
     </div>
     <div class="job-divider"></div>
 
+    <!-- Enbake -->
     <div class="job">
       <div class="job-header">
         <div>
@@ -621,6 +666,7 @@
       <ul>
         <li>Developed and enhanced Ruby on Rails applications in Agile environment using GitHub for version control</li>
         <li>Established foundational automated test coverage using RSpec and Cucumber frameworks</li>
+        <li>Supported production environments, contributing to the stability of Ruby-based consumer platforms</li>
       </ul>
     </div>
   </div>
